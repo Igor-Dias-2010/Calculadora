@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <div id="geral">
+
+        <h1>Calculadora</h1>
+        <p id="resultado">0</p>
+        <button id="botaop" onclick="add(-50)">-50</button>
+        <button id="botaop" onclick="add(-20)">-20</button>
+        <button id="botaop" onclick="add(-10)">-10</button>
+        <button id="botaop" onclick="add(-5)">-5</button>
+        <button id="botaop" onclick="add(-1)">-1</button>
+        <button id="reset" onclick="reset()"> Reset</button>
+        <button id="botaop" onclick="add(1)">+1</button>
+        <button id="botaop" onclick="add(5)">+5</button>
+        <button id="botaop" onclick="add(10)">+10</button>
+        <button id="botaop" onclick="add(20)">+20</button>
+        <button id="botaop" onclick="add(50)">+50</button>
+        
+        <div class="container">
+
+            <div id="botoes">
+                <div id="colu1">
+                    <button id="botao" onclick="dividir(1)">/1</button> <!-- foi -->
+                    <button id="botao" onclick="dividir(2)">/2</button> <!-- foi -->
+                    <button id="botao" onclick="dividir(3)">/3</button> <!-- foi -->
+                    <button id="botao" onclick="dividir(4)">/4</button> <!-- foi -->
+                    <button id="botao" onclick="dividir(5)">/5</button> <!-- foi -->
+                </div>
+
+                <div id="colu2">
+                    <button id="botao" onclick="dividir(6)">/6</button> <!-- foi -->
+                    <button id="botao" onclick="dividir(7)">/7</button> <!-- foi -->
+                    <button id="botao" onclick="dividir(8)">/8</button> <!-- foi -->
+                    <button id="botao" onclick="dividir(9)">/9</button> <!-- foi -->
+                    <button id="botao" onclick="dividir(10)">/10</button>
+                </div>
+            </div>
+
+            <div id="botoes2">
+                <div id="colu3">
+                    <button id="botao" onclick="multiplicar(1)">*1</button> <!--foi -->
+                    <button id="botao" onclick="multiplicar(2)">*2</button> <!--foi -->
+                    <button id="botao" onclick="multiplicar(3)">*3</button> <!--foi -->
+                    <button id="botao" onclick="multiplicar(4)">*4</button> <!--foi -->
+                    <button id="botao" onclick="multiplicar(5)">*5</button> <!--foi -->
+                </div>
+
+                <div id="colu4">
+                    <button id="botao" onclick="multiplicar(6)">*6</button> <!--foi -->
+                    <button id="botao" onclick="multiplicar(7)">*7</button> <!--foi -->
+                    <button id="botao" onclick="multiplicar(8)">*8</button> <!--foi -->
+                    <button id="botao" onclick="multiplicar(9)">*9</button> <!--foi -->
+                    <button id="botao" onclick="multiplicar(10)">*10</button> <!--foi -->
+                 </div>
+            </div>
+
+
+        </div>
+
+    </div>
+
+    <script>
+
+        let numero = 0 
+
+// --------------function add(value)------------------------------------------------
+        function add(value){
+            numero += value
+            render()
+        }
+// --------------function divisão---------------------------------------------------
+        function dividir(value){
+            numero /= value
+            render()
+        }
+// --------------function Reset-----------------------------------------------------
+        function reset(){
+            numero = 0
+            render()
+        }
+// --------------function multiplicação---------------------------------------------
+        function multiplicar(value){
+            numero *= value
+            render()
+        }
+// -------------function render------------------------------------------------------
+        function render(){
+            const p = document.querySelector("#resultado")
+            p.innerText = numero 
+        }
+    </script>
+</body>
+</html>

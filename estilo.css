@@ -1,0 +1,176 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background: lightgreen;
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    /* border: 25px solid red; */
+    /* border: 20px solid lightgreen; */
+}
+div{
+    border: 3px solid black;
+    border-radius:15px;
+    padding: 30px;
+    text-align: center;
+}
+.container{
+    border: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    justify-content: center;
+}
+#botoes, #botoes2{
+    display: grid;
+    gap: 10px;
+}
+#botoes{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap:  20px;
+    justify-content: center;
+}
+#colu1, #colu2{
+    border:  none;
+    display: grid;
+    gap: 10px;
+}
+
+
+#botoes2{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap:  20px;
+    justify-content: center;
+}
+#colu3, #colu4{
+    border:  none;
+    display: grid;
+    gap: 10px;
+}
+h1{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 35px;
+}
+p{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 80px;
+}
+button{
+    font-size: 15px;
+    width: 47px;
+    height: 30px;
+}
+#reset{
+    margin-left: 5px;
+    margin-right: 5px;
+    background: red;
+    border: 5px solid red;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+#reset:hover{
+    border: 3px solid red;
+    background-color: yellow;
+    transform: scale(1.1);
+    color: black;
+}
+#reset:active{
+    transform: scale(0.9);
+}
+#botaop{
+    margin-left: 10px;
+    margin-right: 10px;
+    background: green;
+    border: 5px solid green;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+#botaop:hover{
+    border: 3px solid green;
+    background-color: yellow;
+    transform: scale(1.1);
+    color: black;
+}
+#botaop:active{
+    transform: scale(0.9);
+}
+#botao{
+    font-size: 18px;
+    margin-left: 10px;
+    /* margin-right: 10px; */
+    background: yellow;
+    border: 3px solid black;
+    border-radius: 5px;
+    color: black;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+#botao:hover{
+    border: 3px solid black;
+    background-color: black;
+    transform: scale(1.1);
+    color: yellow;
+}
+#botao:active{
+    transform: scale(0.9);
+}
+/* Telas médias - tablets */
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr; /* Empilha as colunas */
+    }
+
+    #botoes, #botoes2 {
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+    }
+
+    p {
+        font-size: 60px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    button {
+        width: 45px;
+        height: 30px;
+        font-size: 14px;
+    }
+}
+
+/* Telas pequenas - celulares */
+@media (max-width: 480px) {
+    p {
+        font-size: 45px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    button {
+        width: 40px;
+        height: 28px;
+        font-size: 12px;
+    }
+
+    #reset, #botaop {
+        margin: 4px;
+    }
+
+    #botao {
+        margin: 4px;
+        font-size: 13px;
+    }
+}
